@@ -1,0 +1,38 @@
+#signup-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.signupBtnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:max-content;
+    cursor: pointer;
+    bottom: 5rem;
+}
+
+#signup-body .logo {
+    position: absolute;
+    top: 2rem;
+    width: 13%;
+    height: 28%;
+}
+
+.signupBtnContainer .buttonImageSubmit{
+    position: relative;
+    width: 100%;
+}
+
+.signupBtnContainer .buttonText{
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 0.5rem;
+}
