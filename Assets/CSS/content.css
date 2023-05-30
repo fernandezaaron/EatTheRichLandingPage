@@ -9,10 +9,12 @@
 }
 
 .heading-title {
+    font-family: Monstriffic;
     color: #FFC700;
 }
 
 .left-body{
+    font-family: LexendDeca;
     color: #F2FFB4;
 }
 
@@ -22,13 +24,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 75%;
+    max-width: 75%;
     position: relative;
     background-color: rgba(13, 66, 70, .9);
     border-radius: 25px;
-    
-  
-
 }
 
 #forms-container #body-columns{
@@ -36,7 +35,7 @@
     justify-content: center;
     position: relative;
     max-width: 80rem;
-    height: 100%;
+    max-height: 100%;
 
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -75,11 +74,20 @@
 }
 
 .middle-line {
-    border-left: 7px solid #81ffb6;
+    border-left: 7px solid #33ba90;
     height: calc(100% - 8rem);
     z-index: 1;
     position: absolute;
   }
+
+.horizontal-line {
+  border-top: 3px solid #33ba90;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: 1.5rem;
+  /* margin-bottom: ; */
+}
 
 #left-container .carousel {
     position: relative; 
@@ -120,62 +128,123 @@
     right: -50px !important;
   }
   
-  /* .carousel-cell.is-selected {
-    background: #ED2;
-  } */
-  
-  /* cell number */
-  /* .carousel-cell:before {
-    display: flex;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-  } */
 
   form label{
+    font-family: LexendDeca;
     color: #FFC700;
   }
 
   .left-labels{
     display: flex;
     text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   form input {
-    padding: 0.5rem;
-    /* width: 100%; */
-    /* -webkit-min-logical-width:calc(100% - 18px);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px; */
+    /* padding:  */
   }
 
-  .form-check-input{
-    background-color: #162c2c !important;
+  .checkbox-container{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 1.7rem;
+    width: 2.5rem;
+    top: 0.25rem;
   }
-  .form-check-input:checked{
-    background-color: green !important;
-    border: 0;
- }
-  .form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
-    color: black;
-    outline: 0;
-    border: 0;
-    box-shadow: 0 0 0 0.1rem green !important;
- }
+
+  .checkbox-container .checkbox-cell {
+    position: absolute;
+    opacity: 0;
+    color: #81ffb6;
+    cursor: pointer;
+    padding: 0 !important;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .checkbox-container .checkmark {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #162c2c;
+    border: 3px solid #33ba90;
+    border-radius: 10px;
+  }
+
+  .checkbox-container input:checked ~ .checkmark {
+    background-repeat: no-repeat;
+   
+    background-position: center;
+    background-image: url(/Assets/Images/ETR_web_checkmark.png);
+  }
+
+  .checkbox-term{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 1.4rem;
+  }
+
+  .checkbox-term .checkbox-cell {
+    position: absolute;
+    opacity: 0;
+    color: #81ffb6;
+    cursor: pointer;
+    padding: 0 !important;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .checkbox-term .checkmark {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #162c2c;
+    border: 3px solid #33ba90;
+    border-radius: 10px;
+  }
+
+  .checkbox-term input:checked ~ .checkmark {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/Assets/Images/ETR_web_checkmark.png);
+  }
 
   form .channels .form-group{
     display: flex;
+    justify-content: left;
+    align-items: start;
+    position: relative;
     flex-direction: row;
+    padding-bottom: 0.5rem;
   }
 
   
   form .channels .form-group label{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-top: 4px;
+    width: 9rem;
     color: white;
+    font-size: larger;
+
   }
 
   form .channels .form-group .form-control{
@@ -183,9 +252,18 @@
 
   }
 
-  form .terms-of-service {
-
+  form input {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
   }
+
+  form input:disabled {
+    background-color: #162c2c !important;
+    border: none !important;
+  }
+
+  
 
 #btn-container{
     margin-top: 1rem;
@@ -213,15 +291,26 @@
 }
 
 .submitButton .buttonText{
+    font-family: Monstriffic;
     position: absolute;
     font-size: 2rem;
     color: #ffffff;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+}
+
+.terms-of-service{
+  position: relative;
+  width: 100%;
+}
+
+.form-check {
+  padding-left: 0 !important;
 }
 
 .terms-of-service .form-check-label{
+
     text-align: left;
-    padding-left: 1rem;
+    padding-left: 2rem;
     font-size: 0.75rem;
     color: #ffffff;
 }
@@ -234,7 +323,6 @@
     text-align: left;
     font-size: 0.75rem;
     width: 100%;
-    margin-top: -0.5rem;
     color: #ffffff;
 
 }
@@ -246,3 +334,4 @@
 .hide{
     display: none !important;
 }
+

@@ -32,7 +32,9 @@
 
 .signupBtnContainer .buttonText{
     position: absolute;
+    font-family: Monstriffic;
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+
 }

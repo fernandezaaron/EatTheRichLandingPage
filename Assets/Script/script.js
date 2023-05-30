@@ -26,16 +26,5 @@ $(document).ready(function(){
             })
 
         })
-
-
     })
-
-
-
-
-
-
-
-
-
 })
