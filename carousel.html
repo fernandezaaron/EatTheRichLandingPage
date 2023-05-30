@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full-Scaled Carousel with Lightbox</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <style>
+    .carousel-inner img {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Assets/Images/screenshots/ETR_web_screenshot_1.png" data-fancybox="gallery" data-src="Assets/Images/screenshots/ETR_web_screenshot_1.png" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/Images/screenshots/ETR_web_screenshot_2.png" data-fancybox="gallery" data-src="Assets/Images/screenshots/ETR_web_screenshot_2.png" alt="Image 2">
+      </div>
+      <!-- Add more carousel items with the same structure -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Initialize Fancybox
+      $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+          "zoom",
+          "slideShow",
+          "fullScreen",
+          "thumbs",
+          "close"
+        ],
+        loop: true
+      });
+
+      // Enable carousel navigation when clicking on an image
+      $('.carousel-inner img').on('click', function() {
+        var currentIndex = $(this).closest('.carousel-item').index();
+        $('#myCarousel').carousel(currentIndex);
+      });
+    });
+  </script>
+</body>
+</html>

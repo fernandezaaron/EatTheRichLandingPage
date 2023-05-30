@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    
 }
 
 .signupBtnContainer{
@@ -20,21 +21,33 @@
 
 #signup-body .logo {
     position: absolute;
-    top: 2rem;
-    width: 13%;
-    height: 28%;
+    top: -2rem;
+    max-width: fit-content;
+    max-height: fit-content;
+    width: 25vw;
+    height: 25vh;
 }
 
 .signupBtnContainer .buttonImageSubmit{
+    z-index: 1;
     position: relative;
     width: 100%;
 }
 
 .signupBtnContainer .buttonText{
+    z-index: 1;
     position: absolute;
     font-family: Monstriffic;
     font-size: 1.2rem;
     color: white;
     padding-bottom: 0.1rem;
 
+}
+
+@media screen and (max-width: 780px) {
+    #signup-body .logo {
+        width: 40vw;
+        height: 25vh;
+        top: 1rem;
+    }
 }

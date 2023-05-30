@@ -19,25 +19,29 @@ $(document).ready(function(){
 
     });
 
-    
+
 
 });
 
 function postForm(data){
     $.ajax({
         type: "POST",
-        url: "https://",
-        contentType: "",
+        url: "https://sendy-staging.monstronauts.com/subscribe",
+        contentType: "application/x-www-form-urlencoded",
         dataType: 'json',
         data:{
-            api_key: "",
-            referrer: "",
+            api_key: "4RqKgUKPaC0Z6OCjl06h",
+            list: "pVq8JJzRNct5eqtpO5L6NQ",
+            referrer: "https://eattherichgame.com/register/streamers",
+            gdpr: "true",
+            hp: "",
+            boolean: "true",
             name: data.name,
             email: data.email,
-            youtube: data.youtube,
-            twitch: data.twitch,
-            twitter: data.twitter,
-            tiktok: data.tiktok,
+            YouTube: data.youtube,
+            Twitch: data.twitch,
+            Twitter: data.twitter,
+            TikTok: data.tiktok,
         }
     })
 }

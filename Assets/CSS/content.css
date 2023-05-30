@@ -1,12 +1,7 @@
-.content-body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+body{
+  /* border: 3px solid red; */
 }
+
 
 .heading-title {
     font-family: Monstriffic;
@@ -21,26 +16,32 @@
 
 #forms-container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    max-width: 75%;
+    width: 100%;
+    /* max-width: 75%; */
     position: relative;
-    background-color: rgba(13, 66, 70, .9);
-    border-radius: 25px;
+
 }
 
-#forms-container #body-columns{
+#forms-container .body-columns{
     display: flex;
     justify-content: center;
     position: relative;
-    max-width: 80rem;
-    max-height: 100%;
 
-    margin-top: 2.5rem;
+    max-width: 75rem;
+    /* max-height: 100%; */
+
+    background-color: rgba(13, 66, 70, .9);
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+
+    margin-top: 6rem;
     margin-bottom: 1rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
+
+    border-radius: 25px;
+
 }
 
 #forms-container #left-container{
@@ -55,9 +56,6 @@
     padding-right: 4rem;
 }
 
-#middle-line{
-    width: 10%;
-}
 
 #form-container form{
     position: relative;
@@ -70,12 +68,13 @@
     position: relative;
     width: 25%;
     height: 25%;
+    margin-top: 5%;
     padding-bottom: 2%;
 }
 
 .middle-line {
-    border-left: 7px solid #33ba90;
-    height: calc(100% - 8rem);
+    border-left: 3px solid #33ba90;
+    height: calc(100% - 3rem);
     z-index: 1;
     position: absolute;
   }
@@ -89,46 +88,6 @@
   /* margin-bottom: ; */
 }
 
-#left-container .carousel {
-    position: relative; 
-    padding-top: 2rem;
-    /* padding-right: 4rem; */
-    width: 100%;
-    height: 100%;
-
-  }
-  
-  .carousel-cell {
-    width: 33.4%;
-    height: 10rem;
-    padding-right: 0.5rem;
-    /* counter-increment: carousel-cell; */
-  }
-
-  .flickity-prev-next-button {
-    width: 15% !important;
-    height: 15% !important;
-    background: none !important;
-  }
-  .flickity-prev-next-button:hover {
-    background: none !important;
-  }
-  /* arrow color */
-  .flickity-prev-next-button .arrow {
-    fill: #FFC700;
-  }
-  .flickity-prev-next-button.no-svg {
-    color: #FFC700;
-  }
-  /* position outside */
-  .flickity-prev-next-button.previous {
-    left: -50px !important;
-  }
-  .flickity-prev-next-button.next {
-    right: -50px !important;
-  }
-  
-
   form label{
     font-family: LexendDeca;
     color: #FFC700;
@@ -141,23 +100,18 @@
     margin-bottom: 0.5rem;
   }
 
-  form input {
-    /* padding:  */
-  }
-
   .checkbox-container{
     display: flex;
-    justify-content: left;
-    align-items: start;
-    text-align: left;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    min-width: 1.7rem;
+    min-height: 1.7rem;
     height: 1.7rem;
-    width: 2.5rem;
+    width: 2.3rem;
     top: 0.25rem;
   }
 
@@ -190,8 +144,6 @@
 
   .checkbox-term{
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -231,8 +183,6 @@
 
   form .channels .form-group{
     display: flex;
-    justify-content: left;
-    align-items: start;
     position: relative;
     flex-direction: row;
     padding-bottom: 0.5rem;
@@ -281,7 +231,7 @@
     text-align: center;
     cursor: pointer;
     position: relative;
-    /* user-select: none; */
+    user-select: none;
     width: 45%;
 }
 
@@ -290,10 +240,10 @@
     width: 100%;
 }
 
-.submitButton .buttonText{
+.submitButton>.buttonText{
     font-family: Monstriffic;
     position: absolute;
-    font-size: 2rem;
+    font-size: xx-large;
     color: #ffffff;
     padding-bottom: 0.1rem;
 }
@@ -335,3 +285,74 @@
     display: none !important;
 }
 
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1300px) {
+    #forms-container .body-columns{
+      max-width: 45rem;
+      overflow: visible;
+
+  }
+  #forms-container #left-container{
+      width: 100%;
+  }
+  .body-columns{
+      flex-direction: column;
+  }
+  .middle-line{
+      display: none;
+  }
+
+  .submitButton .buttonText {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  
+  
+}
+
+@media screen and (max-width: 720px){
+  #forms-container .body-columns{
+    margin-top: 0rem;
+
+}
+  .left-body {
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .logo {
+    /* position: relative; */
+    width: 30vw;
+    height: 15vh;
+    /* margin-top: 5%; */
+    padding-bottom: 1rem;
+}
+
+  form .channels .form-group label{
+    margin-top: 4px;
+    font-size: medium;
+  }
+
+  .terms-of-service {
+    margin-top: -0.5rem;
+  }
+  .terms-of-service .note-label {
+    font-size: 0.6rem;
+  }
+
+  .terms-of-service .form-check-label{
+    font-size: 0.6rem;
+}
+
+}
+
+@media (max-width: 220px) {
+  form .channels .form-group label{
+    margin-top: 4px;
+    font-size: small;
+  }
+}

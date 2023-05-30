@@ -3,7 +3,7 @@ $(document).ready(function(){
     $(signUpBtn).click(function (e){
         e.preventDefault();
         $.when(
-            $("#signup-body").addClass("ease-out").promise()
+            $("#signup-body").addClass("slide-out-top").promise()
         ).then(
             $(".content-body").addClass("hideOverflow").promise()
         ).then(()=> {
@@ -17,14 +17,14 @@ $(document).ready(function(){
             return deferred.promise();
 
         }).then(
-            $("#forms-container").addClass("ease-in").promise()
+            $("#forms-container").addClass("slide-in-bottom").promise()
         ).then(() =>{
 
             setInterval(()=> {
-                $("#forms-container").removeClass("hideOverflow");
-                $(".content-body").removeClass("hideOverflow");
-            })
+                $("#forms-container").removeClass("hideOverflow")
+                $(".content-body").removeClass("hideOverflow")
+            },1000);
 
         })
-    })
-})
+    });
+});
