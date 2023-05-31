@@ -25,6 +25,10 @@ body{
 
 }
 
+.player-container {
+  justify-content: center;
+  align-items: center;
+}
 #forms-container .body-columns{
     display: flex;
     justify-content: center;

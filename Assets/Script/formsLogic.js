@@ -50,10 +50,10 @@ function postForm(data){
             TikTok: data.tiktok,
         },
         success: function(response){
-          window.location.href = "Assets/Pages/registeredpage.html";
+          window.location.href = "../Assets/Pages/registeredpage.html";
         },
         error: function(xhr, status, error){
-          window.location.href = "Assets/Pages/registeredpage.html";
+          window.location.href = "../Assets/Pages/registeredpage.html";
         }
     })
 }

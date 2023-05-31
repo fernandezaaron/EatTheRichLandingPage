@@ -5,7 +5,7 @@ $(document).ready(function(){
         $.when(
             $("#signup-body").addClass("slide-out-top").promise()
         ).then(
-            $(".content-body").addClass("hideOverflow").promise()
+            $("body").addClass("hideOverflow").promise()
         ).then(()=> {
 
             let deferred = new $.Deferred();
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
             setInterval(()=> {
                 $("#forms-container").removeClass("hideOverflow")
-                $(".content-body").removeClass("hideOverflow")
+                $("body").removeClass("hideOverflow")
             },1000);
 
         })
