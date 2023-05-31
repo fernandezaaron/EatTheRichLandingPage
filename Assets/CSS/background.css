@@ -51,14 +51,6 @@ body {
     height: 100%;
 }
 
-.content-body .copyright{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    user-select: none;
-}
-
 #signup-body .copyright{
     display: flex;
     justify-content: center;
@@ -71,7 +63,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    position: relative;
+    position: absolute;
     user-select: none;
 }
 .copyright .text{
@@ -142,7 +134,7 @@ body {
     #signup-body .copyright{
         width: 85vw;
         font-size: 2.2vw;
-        bottom: -26rem;
+        /* bottom: -26rem; */
 
     }
     
