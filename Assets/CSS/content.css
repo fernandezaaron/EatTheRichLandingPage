@@ -233,6 +233,7 @@ body{
     position: relative;
     user-select: none;
     width: 45%;
+    z-index: 1;
 }
 
 .submitButton .buttonImageSubmit {

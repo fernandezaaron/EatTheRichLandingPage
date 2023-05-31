@@ -60,12 +60,13 @@
 <!--Scripts-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="Assets/Script/script.js"></script>
 <script src="Assets/Script/checkbox.js"></script>
 <script src="Assets/Script/carousel.js"></script>
+<script src="Assets/Script/formsLogic.js"></script>
 
 
 
@@ -88,13 +89,13 @@
     <img class ="logo" src="Assets/Images/ETR_web_logo.png">
     <div id="signup" class="signupBtnContainer">
         <img src="Assets/Images/ETR_web_button_signup.png" class="buttonImageSubmit">
-        <span class="buttonText">SIGN UP For Alpha Test!</span>
+        <span class="buttonText">SIGN UP</span>
     </div>
     <div class="copyright-container">
         <div class="copyright">
             <div class="textcontainer">
                 <span class="text">
-                    © 2023 Monstronauts Inc. All rights reserved. &nbsp
+                    © 2023 Maccima Games LLC. All rights reserved. &nbsp
                 </span>
                 <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
                 <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
@@ -175,7 +176,7 @@
         </div>
         <div class="middle-line"> </div>
         <div id="left-container">
-            <form>
+            <form id="submit-form" method="POST" accept-charset="utf-8">
                 <div class="name-email">
                     <div class="form-group">
                         <label class="left-labels" for="input-name">Name</label>
@@ -224,8 +225,8 @@
                 <div class="horizontal-line"></div>
                 <div class="terms-of-service">
                     <div class="form-group form-check">
-                        <div class="checkbox-term">
-                                <input type="checkbox" class="checkbox-cell" id="checkbox-terms">
+                        <div class="checkbox-term" id="tos-checkbox">
+                                <input type="checkbox" class="checkbox-cell" id="checkbox-terms" required>
                                 <div class="checkmark"></div>
                         </div>
                         <label class="form-check-label" for="checkbox">I accept the Terms of Service and Privacy Policy, and would like to receive the
@@ -235,8 +236,10 @@
                     link at the bottom of every email we send. We value and respect your personal data
                     and privacy. By submitting this form, you agree that we may process your
                         information in accordance with these terms</label> 
+
+                    <input type="submit" id="submit-button" class="hide">
                     <div id="btn-container">
-                        <div class="submitButton" id="submit" >
+                        <div class="submitButton" id="submitBtn">
                             <img src="/Assets/Images/ETR_web_button_submit.png" class="buttonImageSubmit">
                             <span class="buttonText">SUBMIT</span>
                         </div>
@@ -246,15 +249,18 @@
             </form>
         </div>
     </div>
-    <div class="copyright">
-        <div class="textcontainer">
-            <span class="text">
-                © 2023 Monstronauts Inc. All rights reserved. &nbsp
-            </span>
-            <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
-            <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+    <div class="copyright-container">
+        <div class="copyright">
+            <div class="textcontainer">
+                <span class="text">
+                    © 2023 Maccima Games LLC. All rights reserved. &nbsp
+                </span>
+                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+            </div>
         </div>
     </div>
+    
 </div>
 
 
