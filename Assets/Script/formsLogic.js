@@ -8,9 +8,17 @@ $(document).ready(function(){
     $("#submit-form").submit(function(e){
         e.preventDefault();
         $forms = $(this)
-        let data = loadData($forms);
-        console.log(data);
-        postForm(data);
+        let timeout = 10000;
+
+        checkDeviceOnline(timeout)
+        .done((value) => {
+          let data = loadData($forms);
+          postForm(data);
+            
+        })
+        .fail((error) => {
+          customAlert(errorMsg);
+        })
         
 
 
@@ -65,55 +73,57 @@ function loadData($forms){
   }, {});
   return data
 }
-// function checkNetworkStatus() {
-//     let deferred = $.Deferred();
-//     $.ajax({
-//       url: "", 
-//       type: "GET",
-//       timeout: 5000, 
-//       success: function () {
-//         deferred.resolve();
-//       },
-//       error: function(xhr, textStatus, errorThrown) {
-//         deferred.reject();
-//       }
-//     })
-//     return deferred.promise();
-//   }
-//   function periodicallyCheckNetwork() {
-//     setInterval(function() {
-//       if(IS_ONLINE)
-//         checkNetworkStatus();
-//         console.log(isOnline)
-//     }, 1000);
-//   }
-//   function checkDeviceOnline(timeout) {
-//     let deferred = $.Deferred();
+
+function checkNetworkStatus() {
+    let deferred = $.Deferred();
+    $.ajax({
+      url: "", 
+      type: "GET",
+      timeout: 5000, 
+      success: function () {
+        deferred.resolve();
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        deferred.reject();
+      }
+    })
+    return deferred.promise();
+  }
+  function periodicallyCheckNetwork() {
+    setInterval(function() {
+      if(IS_ONLINE)
+        checkNetworkStatus();
+        console.log(isOnline)
+    }, 1000);
+  }
+
+  function checkDeviceOnline(timeout) {
+    let deferred = $.Deferred();
   
-//     checkNetworkStatus()
-//       .done(() => {
-//         deferred.resolve();
-//       })
-//       .fail(() => {
-//         detachSubmitButtonEvent();
-//         customAlert(slowConnection,10000);
-//         setTimeout(() => {
+    checkNetworkStatus()
+      .done(() => {
+        deferred.resolve();
+      })
+      .fail(() => {
+        detachSubmitButtonEvent();
+        customAlert(slowConnection,10000);
+        setTimeout(() => {
       
-//           checkNetworkStatus()
-//             .done(() => {
-//               attachSubmitButtonEvent();
-//               deferred.resolve();
-//             })
-//             .fail(() =>{
-//               attachSubmitButtonEvent();
-//               deferred.reject("Check Internet Connection");
-//             })
+          checkNetworkStatus()
+            .done(() => {
+              attachSubmitButtonEvent();
+              deferred.resolve();
+            })
+            .fail(() =>{
+              attachSubmitButtonEvent();
+              deferred.reject("Check Internet Connection");
+            })
           
-//         }, timeout);
-//       });
+        }, timeout);
+      });
   
-//     return deferred.promise();
-//   }
+    return deferred.promise();
+  }
 
 // function inputValidity(element,onMismatch,onEmpty=""){
 //     $(element).on("input", function() {
@@ -128,11 +138,18 @@ function loadData($forms){
 //   }
 
 
-// function alertHtml(title,message){
-//     return `
-//     <div class="alert-fixed alert alert-warning alert-dismissible fade show" role="alert">
-//       <strong>${title}</strong> ${message}
-//       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-//     </div>
-//     `
-//   }
+function alertHtml(title,message){
+    return `
+    <div class="alert-fixed alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>${title}</strong> ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    `
+  }
+
+  function customAlert(html,timeout=5000){
+    $('body').append(html);
+    setTimeout(function() {
+      $('.alert').alert('close');
+    }, timeout);
+  }

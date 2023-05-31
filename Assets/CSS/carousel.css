@@ -1,27 +1,81 @@
 .carousel{
     display: flex;
     position: relative;
+    /* overflow: hidden; */
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    width: calc(100% + 1rem);
+    height: 10rem;
+
+    /* align-items: center; */
+    /* width: 100%;
+    height: 100%; */
     margin-top: 1rem;
 }
+.carousel-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner .carousel-item img {
+    width: 11rem;
+    height: 11rem;
+    padding-bottom: 1rem;
+        
+}
+
 .carousel-inner{
     transition: transform 0.1s ease; 
+    width: 30rem;
 }
-.carousel-inner .carousel-item {
-    
-    height: 10rem; 
-   
+
+.carousel .card{
+    position: relative;
+    height: 10rem !important;
+    margin-right: 0rem;
+    /* height: 15rem; */
+    width: 10rem;
+    margin-right: 0.3rem;
+
 }
-  
-.carousel-inner .carousel-item img {
+
+.card .card-img img{
     object-fit: cover;
-    height: 100%;
     width: 100%;
-    cursor: pointer;
- }
+    /* max-height: 10rem; */
+
+}
+
+.carousel img {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+/* .carousel-inner .carousel-item-end.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-start.active, 
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+}
+
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+} */
 
 .carousel-prev-arrow{
     position: absolute;
@@ -54,49 +108,64 @@
     transform: scaleX(-1);
 }
 
-.fancybox-navigation .fancybox-arrow {
-    background-image: url('/Assets/Images/ETR_web_caret.png') !important; /* Customize the path to your left arrow icon */
-  }
 
-  .fancybox-navigation .fancybox-arrow--right {
-    background-image: url('/Assets/Images/ETR_web_caret.png') !important; /* Customize the path to your right arrow icon */
-  }
+
+.f-button svg, .fancybox__infobar{
+    color: #FFC700;
+}
+
+.f-button.is-next svg, .f-button.is-prev svg{
+    width: 3rem;
+    height: 3rem;
+}
 
 @media screen and (max-width: 1300px) {
     .carousel-inner {
-        margin-top: 2rem;
+        margin-left: 4rem;
+        /* width: 100%; */
     }
 }
 
 @media screen and (max-width: 770px) {
-    .carousel-inner {
-        margin-top: 1rem;
+
+   
+    .carousel-inner .carousel-item > div {
+        display: none;
     }
-    .carousel-inner .carousel-item {
-        height: auto;
-      /* width: 2rem; */
-      /* width: fit-content; */
-      /* height: fit-content; */
-    }
-    .carousel-inner .carousel-item img {
-        width: 10rem;
-        height: 10rem;
-        padding-bottom: 1rem;
-            
+    .carousel-inner .carousel-item > div:first-child {
+        display: flex;
+        justify-content: center;
+    
+
     }
 
-    /* .carousel-next-arrow {
-        right: 50px;
+    .carousel {
+        height: 100%;
+    }
+    .carousel .card{
+        height: 10rem !important;
+        /* height: 15rem; */
+        width: 50%;
+    
+    
+    }
+
+    .carousel-inner {
+        margin-top: 1rem;
+        margin-left: 0rem;
+        width: 100%;
+    }
+    /* .carousel-next-arrow{
+    
+        right: 10rem;
+
     }
 
     .carousel-prev-arrow{
-        left: 50px;
-    } */
+    
+        left: 10rem;
 
-    /* .carousel-item .col-md-4 {
-        display: block;
     } */
-    .carousel {
-        /* width: 20rem; */
-    }
+    
+
   }
