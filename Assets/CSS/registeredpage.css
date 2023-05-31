@@ -36,12 +36,13 @@
     text-align: justify;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1300px) {
     #registered-container .registered-box{
-        width: 85vw;
+        width: 70vw;
     }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
     #registered-container .registered-box{
         padding: 2rem 2rem 2rem 2rem;
         
