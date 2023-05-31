@@ -36,7 +36,7 @@
     text-align: justify;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
     #registered-container .registered-box{
         width: 70vw;
     }
