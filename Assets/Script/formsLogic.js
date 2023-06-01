@@ -1,5 +1,5 @@
-// let errorMessage = alertHtml("Connection Problem!","It seems that you are offline or the connection is slow")
-// let slowConnection = alertHtml("Ohh no!","It seems that your connection is slow, Please wait!")
+let errorMessage = alertHtml("Connection Problem!","It seems that you are offline or the connection is slow")
+let slowConnection = alertHtml("Ohh no!","It seems that your connection is slow, Please wait!")
 
 $(document).ready(function(){
     // let submitBtn = $("#submit-form");
@@ -72,10 +72,10 @@ function postForm(data){
             TikTok: data.tiktok,
         },
         success: function(response){
-          window.location.href = "../registeredpageÌnfluencers.html";
+          window.location.href = "../registeredPageInfluencers.html";
         },
         error: function(xhr, status, error){
-          window.location.href = "../registeredpageInfluencers.html";
+          window.location.href = "../registeredPageInfluencers.html";
         }
     })
 

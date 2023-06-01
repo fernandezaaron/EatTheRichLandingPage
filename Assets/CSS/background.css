@@ -70,6 +70,7 @@ body {
     margin-top: 2rem;
     bottom: -4.25rem;
     z-index: 1;
+    margin-bottom: 1rem;
 }
 #forms-container #player-copyright{
     display: flex;
@@ -79,6 +80,7 @@ body {
     user-select: none;
     margin-top: 2rem;
     bottom: -4rem;
+    margin-bottom: 1rem;
 }
 
 .copyright .text{
@@ -149,25 +151,26 @@ body {
     }
 } */
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     #signup-body .copyright{
         width: 85vw;
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         /* bottom: -26rem; */
 
     }
     
     #forms-container .copyright {
         width: 85vw;
-        font-size: 2.2vw;
-        bottom: -1.3rem;
+        font-size: 2.5vw;
+        bottom: -4.5rem;
 
     }
 
     #forms-container #player-copyright{
         width: 85vw;
-        font-size: 2.2vw;
-        bottom: -1.3rem;
+        font-size: 2.5vw;
+        bottom: -4.5rem;
+
     }
 
 

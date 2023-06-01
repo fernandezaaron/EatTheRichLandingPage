@@ -79,3 +79,32 @@
         font-size: 3vw;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #registered-container .registered-box{
+        width: 90vw;
+        
+    }
+    .registered-box .title{
+        font-size: 7vw;
+    }
+    .registered-box .description{
+        font-size: 3vw;
+    }
+
+    #back-btn-container .buttonImageSubmit{
+
+        width: 50%;
+        /* height: 100%; */
+    }
+   
+}
+
+@media screen and (max-width: 320px) {
+    .backButton .buttonText{
+
+        /* width: 50%; */
+        /* height: 100%; */
+        font-size: 1rem;
+    }
+}

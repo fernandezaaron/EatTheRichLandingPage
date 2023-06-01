@@ -185,7 +185,7 @@ body{
     background-repeat: no-repeat;
    
     background-position: center;
-    background-image: url(/Assets/Images/ETR_web_checkmark.png);
+    background-image: url(../Images/ETR_web_checkmark.png);
   }
 
   .checkbox-term{
@@ -224,7 +224,7 @@ body{
   .checkbox-term input:checked ~ .checkmark {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/Assets/Images/ETR_web_checkmark.png);
+    background-image: url(../Images/ETR_web_checkmark.png);
   }
 
   form .channels .form-group{
