@@ -78,7 +78,7 @@ body {
     position: absolute;
     user-select: none;
     margin-top: 2rem;
-    bottom: -8rem;
+    bottom: -4rem;
 }
 
 .copyright .text{
@@ -160,13 +160,14 @@ body {
     #forms-container .copyright {
         width: 85vw;
         font-size: 2.2vw;
+        bottom: -1.3rem;
 
     }
 
     #forms-container #player-copyright{
         width: 85vw;
         font-size: 2.2vw;
-        bottom: -2rem;
+        bottom: -1.3rem;
     }
 
 

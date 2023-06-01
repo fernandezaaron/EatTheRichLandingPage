@@ -65,24 +65,24 @@
 <script src="../Assets/Script/carousel.js"></script>
 <script src="../Assets/Script/formsLogic.js"></script>
 
-<title>Potion Punch Rivals</title>
-<meta name="title" content="Potion Punch Rivals">
+<title>Eat The Rich</title>
+<meta name="title" content="Eat The Rich">
 <meta name="description" content="Join the Alpha! Cook, mix, dash, and serve in this cozy online multiplayer cooking battle arena.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://potionpunchrivals.com">
-<meta property="og:title" content="Potion Punch Rivals">
+<meta property="og:url" content="https://www.eattherichgame.com">
+<meta property="og:title" content="Eat The Rich">
 <meta property="og:description" content="Join the Alpha! Cook, mix, dash, and serve in this cozy online multiplayer cooking battle arena.">
 <meta property="og:image" content="https://potionpunchrivals.com/assets/static/image/meta/ppr_meta_image.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://potionpunchrivals.com">
+<meta property="twitter:url" content="https://www.eattherichgame.com">
 <meta name="twitter:creator" content="@MonstronautsInc">
-<meta property="twitter:title" content="Potion Punch Rivals">
+<meta property="twitter:title" content="Eat The Rich">
 <meta property="twitter:description" content="Join the Alpha! Cook, mix, dash, and serve in this cozy online multiplayer cooking battle arena.">
-<meta property="twitter:image" content="https://potionpunchrivals.com/assets/static/image/meta/ppr_meta_image.png">
+<meta property="twitter:image" content="https://eattherichgame.com/Assets/Images/ETR_meta_image.png">
 
 </head>
 
@@ -101,10 +101,10 @@
         <div class="copyright">
             <div class="textcontainer">
                 <span class="text">
-                    © 2023 Maccima Games LLC. All rights reserved. &nbsp
+                    © 2023 Maccima Games LLC. All rights reserved.
                 </span>
-                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
-                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/eat-the-rich/">Privacy Policy.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/eat-the-rich/">Terms of Service.</a>
             </div>
         </div>
     </div>
@@ -248,8 +248,9 @@
                                 <input type="checkbox" class="checkbox-cell" id="checkbox-terms" required>
                                 <div class="checkmark"></div>
                         </div>
-                        <label class="form-check-label" for="checkbox">I accept the Terms of Service and Privacy Policy, and would like to receive the
-                        latest news, updates, and other marketing-related content about Eat the Rich from the Monstronauts team.
+                        <label class="form-check-label" for="checkbox">I accept the  <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/eat-the-rich/">Terms of Service.</a>
+                            and <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/eat-the-rich/">Privacy Policy.</a>, 
+                            and would like to receive the latest news, updates, and other marketing-related content about Eat the Rich from the Monstronauts team.
                     </div>
                     <label class="note-label"><span class="important-note"> Important Note: </span>You may withdraw your consent anytime by clicking the unsubscribe
                     link at the bottom of every email we send. We value and respect your personal data
@@ -274,10 +275,11 @@
                 <span class="text">
                     © 2023 Maccima Games LLC. All rights reserved. &nbsp
                 </span>
-                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
-                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/eat-the-rich/">Privacy Policy.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/eat-the-rich/">Terms of Service.</a>
             </div>
         </div>
+      
     </div>
     
 </div>
