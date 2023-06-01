@@ -102,8 +102,8 @@
                 <span class="text">
                     © 2023 Maccima Games LLC. All rights reserved. &nbsp
                 </span>
-                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
-                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/eat-the-rich/">Privacy Policy.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/eat-the-rich/">Terms of Service.</a>
             </div>
         </div>
     </div>
@@ -212,6 +212,7 @@
                                 <input type="checkbox" class="checkbox-cell" id="checkbox-terms" required>
                                 <div class="checkmark"></div>
                         </div>
+                
                         <label class="form-check-label" for="checkbox">I accept the Terms of Service and Privacy Policy, and would like to receive the
                         latest news, updates, and other marketing-related content about Eat the Rich from the Monstronauts team.
                     </div>
@@ -238,8 +239,8 @@
                 <span class="text">
                     © 2023 Maccima Games LLC. All rights reserved. &nbsp
                 </span>
-                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/potion-punch-rivals">Privacy Policy.</a>
-                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/potion-punch-rivals/">Terms of Service.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/privacy-policy/eat-the-rich/">Privacy Policy.</a>
+                <a class="hyperlinks" href="https://monstronauts.com/terms-of-service/eat-the-rich/">Terms of Service.</a>
             </div>
         </div>
     </div>
