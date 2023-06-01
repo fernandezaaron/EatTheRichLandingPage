@@ -60,7 +60,7 @@ function postForm(data){
         data:{
             api_key: "4RqKgUKPaC0Z6OCjl06h",
             list: "pVq8JJzRNct5eqtpO5L6NQ",
-            referrer: "https://eattherichgame.com/register/streamers",
+            referrer: "https://eattherichgame.com/register/influencer",
             gdpr: "true",
             hp: "",
             boolean: "true",
@@ -72,10 +72,10 @@ function postForm(data){
             TikTok: data.tiktok,
         },
         success: function(response){
-          window.location.href = "../Assets/Pages/registeredpageÌnfluencers.html";
+          window.location.href = "../registeredpageÌnfluencers.html";
         },
         error: function(xhr, status, error){
-          window.location.href = "../Assets/Pages/registeredpageInfluencers.html";
+          window.location.href = "../registeredpageInfluencers.html";
         }
     })
 
@@ -90,7 +90,7 @@ function postPlayersForm(data){
     data:{
         api_key: "4RqKgUKPaC0Z6OCjl06h",
         list: "SH2sa7cJ5TFDh6mrqFYkLw",
-        referrer: "https://eattherichgame.com/register/players",
+        referrer: "https://eattherichgame.com/register/player",
         gdpr: "true",
         hp: "",
         boolean: "true",
@@ -98,10 +98,10 @@ function postPlayersForm(data){
         email: data.email,
     },
     success: function(response){
-      window.location.href = "../Assets/Pages/registeredpage.html";
+      window.location.href = "../registeredpage.html";
     },
     error: function(xhr, status, error){
-      window.location.href = "../Assets/Pages/registeredpage.html";
+      window.location.href = "../registeredpage.html";
     }
 })
 }
