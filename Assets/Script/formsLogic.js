@@ -5,7 +5,7 @@ $(document).ready(function(){
     // let submitBtn = $("#submit-form");
     console.log("submitted");
 
-    $("#submit-form").submit(function(e){
+    $("#submit-form-influencers").submit(function(e){
         e.preventDefault();
         $forms = $(this)
         let timeout = 10000;
@@ -19,12 +19,26 @@ $(document).ready(function(){
         .fail((error) => {
           customAlert(errorMsg);
         })
-        
-
-
     });
 
+    $("#submit-form-players").submit(function(e){
+      e.preventDefault();
+      $forms = $(this)
+      let timeout = 10000;
+
+      checkDeviceOnline(timeout)
+      .done((value) => {
+        let data = loadData($forms);
+        postPlayersForm(data);
+          
+      })
+      .fail((error) => {
+        customAlert(errorMsg);
+      })
+  });
+
     submitButton();
+    // inputValidity("#email","Please enter a valid email")
 
    
 });
@@ -58,12 +72,38 @@ function postForm(data){
             TikTok: data.tiktok,
         },
         success: function(response){
-          window.location.href = "../Assets/Pages/registeredpage.html";
+          window.location.href = "../Assets/Pages/registeredpageÌnfluencers.html";
         },
         error: function(xhr, status, error){
-          window.location.href = "../Assets/Pages/registeredpage.html";
+          window.location.href = "../Assets/Pages/registeredpageInfluencers.html";
         }
     })
+
+}
+https://sendy-staging.monstronauts.com/uploads/1685507649.png
+function postPlayersForm(data){
+  $.ajax({
+    type: "POST",
+    url: "https://sendy-staging.monstronauts.com/subscribe",
+    contentType: "application/x-www-form-urlencoded",
+    dataType: 'json',
+    data:{
+        api_key: "4RqKgUKPaC0Z6OCjl06h",
+        list: "SH2sa7cJ5TFDh6mrqFYkLw",
+        referrer: "https://eattherichgame.com/register/players",
+        gdpr: "true",
+        hp: "",
+        boolean: "true",
+        name: data.name,
+        email: data.email,
+    },
+    success: function(response){
+      window.location.href = "../Assets/Pages/registeredpage.html";
+    },
+    error: function(xhr, status, error){
+      window.location.href = "../Assets/Pages/registeredpage.html";
+    }
+})
 }
 function loadData($forms){
   let serializedData  = $forms.serializeArray();
@@ -125,17 +165,21 @@ function checkNetworkStatus() {
     return deferred.promise();
   }
 
-// function inputValidity(element,onMismatch,onEmpty=""){
-//     $(element).on("input", function() {
+function inputValidity(element,onMismatch,onEmpty=""){
+    $(element).on("input", function() {
       
-//       if (this.validity.typeMismatch) {
-//         this.setCustomValidity(onMismatch);
-//       }
-//       else {
-//         this.setCustomValidity(onEmpty);
-//       } 
-//     });
-//   }
+      if (this.validity.typeMismatch) {
+        this.setCustomValidity(onMismatch);
+      }
+      else {
+        this.setCustomValidity(onEmpty);
+      } 
+    });
+  }
+
+
+
+
 
 
 function alertHtml(title,message){
