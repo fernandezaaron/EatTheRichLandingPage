@@ -9,7 +9,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#back-button-influencer").click(function(e){
         e.preventDefault();
-        window.location.href = "../../register/influencers.html";
+        window.location.href = "../../register/influencer.html";
         console.log("click");
     });
 });
