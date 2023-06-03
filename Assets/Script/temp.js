@@ -21,9 +21,7 @@ $(document).ready(function(){
           customAlert(errorMsg);
           setTimeout(function() {
           $("#submit-button").prop("disabled", false); 
-          $('#b-active').removeClass("submit-active");
-          $('#b-active').addClass("submit-pressed");
-          // $(".buttonImageSubmit").attr("src", "../Assets/Images/ETR_web_button_submit.png");
+          $(".buttonImageSubmit").attr("src", "/Assets/Images/ETR_web_button_submit.png");
           }, 2000);
         })
     });
@@ -42,9 +40,7 @@ $(document).ready(function(){
         customAlert(errorMsg);
         setTimeout(function() {
         $("#submit-button").prop("disabled", false); 
-        $('#b-active').removeClass("submit-active");
-          $('#b-active').addClass("submit-pressed");
-        // $(".buttonImageSubmit").attr("src", "../Assets/Images/ETR_web_button_submit.png");
+        $(".buttonImageSubmit").attr("src", "/Assets/Images/ETR_web_button_submit.png");
         }, 2000);
        
       })
@@ -60,13 +56,11 @@ function submitButton(){
   $("#submitBtn").click(function(e) {
     $("#submit-button").click();    
     if(isFilled()) {
-      // $(".buttonImageSubmit").attr("src", "../Assets/Images/ETR_web_button_submit_pressed.png");
-      $('#b-active').addClass("submit-pressed");
-      $('#b-pressed').removeClass("submit-active");
       $("#submit-button").prop("disabled", true);
+      $(".buttonImageSubmit").attr("src", "/Assets/Images/ETR_web_button_submit_pressed.png");
     }
     else{
-      setCustomValidity('Please fill out all required fields before submitting.');
+      alert('Please fill out all required fields before submitting.');
       e.preventDefault();
     }
     
@@ -87,7 +81,7 @@ function isFilled(){
   var termsCheckbox = $('#checkbox-terms');
   if (!termsCheckbox.is(':checked')) {
     formFilled = false;
-    setCustomValidity("Please check the Terms of Service checkbox");
+    customAlert(checkboxAlert);
   }
 
   return formFilled;
@@ -96,12 +90,12 @@ function isFilled(){
 function postForm(data){
     $.ajax({
         type: "POST",
-        url: "https://sendy-staging.monstronauts.com/subscribe", //https://sendy.monstronauts.com/subscribe
+        url: "https://sendy.monstronauts.com/subscribe",
         contentType: "application/x-www-form-urlencoded",
         dataType: 'json',
         data:{
-            api_key: "4RqKgUKPaC0Z6OCjl06h", //8bQQyZdQC8J7O2qad8lz
-            list: "pVq8JJzRNct5eqtpO5L6NQ", //x3HscDkCk3PGJCsdfKW3ZA
+            api_key: "8bQQyZdQC8J7O2qad8lz",
+            list: "x3HscDkCk3PGJCsdfKW3ZA",
             referrer: "https://eattherichgame.com/register/influencer",
             gdpr: "true",
             hp: "",
@@ -122,16 +116,16 @@ function postForm(data){
     })
 
 }
-
+// https://sendy-staging.monstronauts.com/uploads/1685507649.png
 function postPlayersForm(data){
   $.ajax({
     type: "POST",
-    url: "https://sendy-staging.monstronauts.com/subscribe",
+    url: "https://sendy.monstronauts.com/subscribe",
     contentType: "application/x-www-form-urlencoded",
     dataType: 'json',
     data:{
-        api_key: "4RqKgUKPaC0Z6OCjl06h", 
-        list: "SH2sa7cJ5TFDh6mrqFYkLw", //vgWJKCnS8USYbyBti7YUcw
+        api_key: "8bQQyZdQC8J7O2qad8lz", 
+        list: "vgWJKCnS8USYbyBti7YUcw",
         referrer: "https://eattherichgame.com/register/player",
         gdpr: "true",
         hp: "",

@@ -336,6 +336,14 @@ body{
     display: none !important;
 }
 
+.signup-active, .submit-active{
+  filter: brightness(1);
+
+
+}
+.signup-pressed, .submit-pressed{
+  filter: brightness(0.7);
+}
 
 
 /* Media query for smaller screens */

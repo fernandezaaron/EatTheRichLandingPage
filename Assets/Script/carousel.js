@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     var items = $('.carousel .carousel-item');
     items.each(function() {
-        var minPerSlide = 4;
+        var minPerSlide = 3;
         var next = $(this).next();
   
         for (var i = 1; i < minPerSlide; i++) {
